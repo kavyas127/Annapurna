@@ -9,8 +9,13 @@
 }
 
 @font-face {
-    font-family: metamorphic;
+    font-family: metrophobic;
     src: url(../fonts/Metrophobic-Regular.ttf);
+}
+
+@font-face {
+    font-family: magical;
+    src: url(../fonts/MagicalSource.ttf);
 }
 
 * {
@@ -62,7 +67,7 @@ button:hover {
     z-index: 100;
     color: aliceblue;
     font-size: 1.1rem;
-    font-family: metamorphic;
+    font-family: metrophobic;
 }
 
 .header-contents {
@@ -131,7 +136,7 @@ button:hover {
 .fbut {
     height: 3rem;
     width: 10rem;
-    font-family: metamorphic;
+    font-family: metrophobic;
     font-size: 1rem;
     border: none;
     font-weight: 900;
@@ -181,12 +186,27 @@ button:hover {
 }
 
 .stats{
-    font-family: metamorphic;
-    font-size: 2rem;
+    transform: translateY(1.3rem);
+    font-family: magical;
     width: fit-content;
     height: fit-content;
     color: aliceblue;
 }
+
+#quote-container {
+    width: 80%;
+    text-align: center;
+    transition: opacity 0.5s, filter 0.5s;
+    width: 50vw;
+    height: fit-content;
+}
+
+#quote {
+    text-align: left;
+    font-size: 4rem;
+    transition: opacity 0.5s, filter 0.5s;
+}
+
 
 
 
@@ -303,6 +323,10 @@ button:hover {
     position: absolute;
     opacity: 0;
     animation: display 20s infinite;
+}
+
+img:nth-child(1) {
+    animation-delay: 0s;
 }
 
 img:nth-child(2) {
