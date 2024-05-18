@@ -1,6 +1,6 @@
 @font-face {
     font-family: rochester;
-    src: url(../fonts/Rochester-Regular.ttf); 
+    src: url(../fonts/Rochester-Regular.ttf);
 }
 
 @font-face {
@@ -10,10 +10,10 @@
 
 @font-face {
     font-family: metamorphic;
-    src: url(../fonts/Metrophobic-Regular.ttf); 
+    src: url(../fonts/Metrophobic-Regular.ttf);
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     border: 0;
@@ -21,7 +21,7 @@
     scroll-behavior: smooth;
 }
 
-a{
+a {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
@@ -34,21 +34,24 @@ a{
     opacity: 65%;
 }
 
-.ah1:hover, .ah3:hover, .ah2:hover, .ah4:hover {
+.ah1:hover,
+.ah3:hover,
+.ah2:hover,
+.ah4:hover {
     opacity: 100%;
     color: #FCDC2A;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
-.logo{
+.logo {
     font-size: 1.2rem;
     color: #FCDC2A;
 }
 
-.header{
+.header {
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -62,14 +65,14 @@ button:hover{
     font-family: metamorphic;
 }
 
-.header-contents{
+.header-contents {
     display: flex;
     flex-direction: row;
-    transform:translateX(-6.5rem);
+    transform: translateX(-6.5rem);
     column-gap: 3rem;
 }
 
-.first-page{
+.first-page {
     background-color: #1A4D2E;
     background-size: cover;
     background-repeat: no-repeat;
@@ -81,7 +84,7 @@ button:hover{
     align-items: center;
 }
 
-.first-background{
+.first-background {
     height: 100vh;
     width: 100vw;
     opacity: 0.3;
@@ -89,7 +92,7 @@ button:hover{
     position: relative;
 }
 
-.first-center{
+.first-center {
     z-index: 3;
     justify-content: center;
     align-items: center;
@@ -101,7 +104,7 @@ button:hover{
     position: absolute;
 }
 
-.first-title{
+.first-title {
     font-family: noto;
     font-size: 5rem;
     font-weight: 700;
@@ -109,7 +112,7 @@ button:hover{
     transform: translateY(1rem);
 }
 
-.first-sub{
+.first-sub {
     font-size: 1.6rem;
     font-family: rochester;
     color: aliceblue;
@@ -119,13 +122,13 @@ button:hover{
     text-align: center;
 }
 
-.first-button{
+.first-button {
     display: flex;
     flex-direction: row;
     column-gap: 1rem;
 }
 
-.fbut{
+.fbut {
     height: 3rem;
     width: 10rem;
     font-family: metamorphic;
@@ -134,23 +137,188 @@ button:hover{
     font-weight: 900;
 }
 
-.fone{
+.fone {
     background-color: #FCDC2A;
     color: #1A4D2E;
 }
 
-.fone:hover{
+.fone:hover {
     background-color: #f1dc64;
     color: #1A4D2E;
     border: solid 0.1rem #052913;
 }
 
-.ftwo{
+.ftwo {
     background-color: black;
     color: #FCDC2A;
 }
 
-.ftwo:hover{
+.ftwo:hover {
     background-color: rgb(81, 80, 80);
     border: solid 0.1rem #052913;
 }
+
+.second-page {
+    background-color: #285430;
+    display: flex;
+    flex-direction: row;
+}
+
+.second-left {
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-right {
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats{
+    font-family: metamorphic;
+    font-size: 2rem;
+    width: fit-content;
+    height: fit-content;
+    color: aliceblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* here outside */
+.pic {
+    width: 25vw;
+    height: 50vh;
+}
+
+.pic-ctn {
+    width: 25vw;
+    height: 50vh;
+    transform: translateY(2rem);
+    border: solid 0.1rem #FCDC2A;
+    padding: 0.5rem;
+}
+
+@keyframes display {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+
+.pic-ctn {
+    position: relative;
+    width: 25vw;
+    height: 50vh;
+}
+
+.pic-ctn>img {
+    position: absolute;
+    opacity: 0;
+    animation: display 20s infinite;
+}
+
+img:nth-child(2) {
+    animation-delay: 5s;
+}
+
+img:nth-child(3) {
+    animation-delay: 10s;
+}
+
+img:nth-child(4) {
+    animation-delay: 15s;
+}
+
+img:nth-child(5) {
+    animation-delay: 20s;
+}
+
+/* here outside */
