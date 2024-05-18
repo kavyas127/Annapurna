@@ -186,7 +186,6 @@ button:hover {
 }
 
 .stats{
-    transform: translateY(1.3rem);
     font-family: magical;
     width: fit-content;
     height: fit-content;
@@ -322,7 +321,7 @@ button:hover {
 .pic-ctn>img {
     position: absolute;
     opacity: 0;
-    animation: display 20s infinite;
+    animation: display 40s infinite;
 }
 
 img:nth-child(1) {
@@ -330,19 +329,23 @@ img:nth-child(1) {
 }
 
 img:nth-child(2) {
-    animation-delay: 5s;
-}
-
-img:nth-child(3) {
     animation-delay: 10s;
 }
 
+img:nth-child(3) {
+    animation-delay: 20s;
+}
+
 img:nth-child(4) {
-    animation-delay: 15s;
+    animation-delay: 30s;
 }
 
 img:nth-child(5) {
-    animation-delay: 20s;
+    animation-delay: 40s;
+}
+
+img:nth-child(6) {
+    animation-delay: 50s;
 }
 
 /* here outside */
