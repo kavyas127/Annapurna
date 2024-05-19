@@ -30,4 +30,27 @@ displayQuote();
 // Function to display quotes at regular intervals
 setInterval(displayQuote, 10000); // 10000 milliseconds = 10 seconds
 
+//third-page js
+document.addEventListener("DOMContentLoaded", function() {
+    const thirdPage = document.getElementById('leaderboard');
+    const thirdBoxes = document.querySelectorAll('.third-box');
+    let hasScrolledToThirdPage = false;
+
+    function handleScroll() {
+        const thirdPageTop = thirdPage.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (thirdPageTop <= windowHeight && !hasScrolledToThirdPage) {
+            hasScrolledToThirdPage = true;
+            thirdBoxes.forEach((box, index) => {
+                setTimeout(() => {
+                    box.classList.add('fade-in');
+                }, index * 500); // 500ms delay between each box
+            });
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+});
+
 

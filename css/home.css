@@ -45,6 +45,7 @@ a {
 .ah4:hover {
     opacity: 100%;
     color: #FCDC2A;
+    font-weight: 600;
 }
 
 button:hover {
@@ -227,7 +228,7 @@ button:hover {
     transform: translateY(2rem);
     font-family: magical;
     font-size: 3rem;
-    color: aliceblue;
+    color: #FCDC2A;
 }
 
 .for-hotels, .for-ngos, .for-volunteers{
@@ -238,13 +239,15 @@ button:hover {
     flex-direction: column;
     row-gap: 2rem;
     align-items: center;
+    width: fit-content;
+    height: max-content;
 }
 
 .third-sub{
-    font-family: magical;
+    font-family: noto;
     font-size: 2rem;
     color: aliceblue;
-    font-weight: 200;
+    font-weight: 600;
     width: fit-content;
     height: fit-content;
     transform: translateY(1rem);
@@ -284,6 +287,22 @@ button:hover {
     color: #C68484;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.third-box {
+    opacity: 0; /* Start hidden */
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
 
 
 
