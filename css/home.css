@@ -186,6 +186,7 @@ button:hover {
 }
 
 .stats{
+    transform: translateY(1.2em);
     font-family: magical;
     width: fit-content;
     height: fit-content;
@@ -206,7 +207,82 @@ button:hover {
     transition: opacity 0.5s, filter 0.5s;
 }
 
+.third-page{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1A4D2E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.leader-cont{
+    display: flex;
+    flex-direction: row;
+}
+
+.third-tit{
+    font-weight: 200;
+    transform: translateY(2rem);
+    font-family: magical;
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+.for-hotels, .for-ngos, .for-volunteers{
+    transform: translateY(2rem);
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+}
+
+.third-sub{
+    font-family: magical;
+    font-size: 2rem;
+    color: aliceblue;
+    font-weight: 200;
+    width: fit-content;
+    height: fit-content;
+    transform: translateY(1rem);
+}
+
+.third-box{
+    display: flex;
+    width: 25vw;
+    height: 10vh;
+    background-color: #436850;
+    border-radius: 1rem;
+    justify-content: space-around;
+    padding: 1rem;
+    align-items: center;
+    flex-direction: row;
+}
+
+.third-p{
+    font-family: magical;
+    font-size: 1.75rem;
+    color: aliceblue;
+}
+
+.fa-solid{
+    font-size: 1.75rem;
+}
+
+.tr1{
+    color: #FDDE55;
+}
+
+.tr2{
+    color: #B4B4B8;
+}
+
+.tr3{
+    color: #C68484;
+}
 
 
 

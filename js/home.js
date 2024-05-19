@@ -29,3 +29,5 @@ displayQuote();
 
 // Function to display quotes at regular intervals
 setInterval(displayQuote, 10000); // 10000 milliseconds = 10 seconds
+
+
