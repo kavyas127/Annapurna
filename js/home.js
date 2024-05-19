@@ -1,3 +1,7 @@
+
+
+//second page js
+
 // Array of quotes
 const quotes = [
     "\"Up to 783 million people - one in 10 of the world's population - still go to bed hungry every night.\"",
@@ -29,6 +33,7 @@ displayQuote();
 
 // Function to display quotes at regular intervals
 setInterval(displayQuote, 10000); // 10000 milliseconds = 10 seconds
+
 
 //third-page js
 document.addEventListener("DOMContentLoaded", function() {

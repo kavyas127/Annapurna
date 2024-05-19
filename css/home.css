@@ -304,6 +304,17 @@ button:hover {
     animation: fadeIn 1s forwards;
 }
 
+.fa-star{
+    font-weight: 100;
+    transform: translateY(0.25rem);
+}
+
+.fourth-page{
+    width: 100vw;
+    height: 100vh;
+}
+
+
 
 
 
