@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const thirdPage = document.getElementById('leaderboard');
     const thirdBoxes = document.querySelectorAll('.third-box');
     let hasScrolledToThirdPage = false;
+    let timeoutIds = [];
 
     function handleScroll() {
         const thirdPageTop = thirdPage.getBoundingClientRect().top;
@@ -43,14 +44,24 @@ document.addEventListener("DOMContentLoaded", function() {
         if (thirdPageTop <= windowHeight && !hasScrolledToThirdPage) {
             hasScrolledToThirdPage = true;
             thirdBoxes.forEach((box, index) => {
-                setTimeout(() => {
+                timeoutIds.push(setTimeout(() => {
                     box.classList.add('fade-in');
-                }, index * 500); // 500ms delay between each box
+                }, index * 500)); // 500ms delay between each box
+            });
+        } else if (thirdPageTop > windowHeight && hasScrolledToThirdPage) {
+            // User has scrolled away from page 3, reset the flag and clear timeouts
+            hasScrolledToThirdPage = false;
+            timeoutIds.forEach((timeoutId) => {
+                clearTimeout(timeoutId);
+            });
+            timeoutIds = [];
+            // Also remove the 'fade-in' class from boxes if you want them to reappear when user scrolls back to page 3
+            thirdBoxes.forEach((box) => {
+                box.classList.remove('fade-in');
             });
         }
     }
 
     window.addEventListener('scroll', handleScroll);
 });
-
 
