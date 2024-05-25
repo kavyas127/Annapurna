@@ -1,0 +1,149 @@
+@font-face {
+    font-family: rochester;
+    src: url(../fonts/Rochester-Regular.ttf);
+}
+
+@font-face {
+    font-family: noto;
+    src: url(../fonts/NotoSerifDisplay-VariableFont_wdth,wght.ttf);
+}
+
+@font-face {
+    font-family: metrophobic;
+    src: url(../fonts/Metrophobic-Regular.ttf);
+}
+
+@font-face {
+    font-family: magical;
+    src: url(../fonts/MagicalSource.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 6vh;
+    align-items: center;
+    padding: 1rem 3rem;
+    z-index: 100;
+    color: aliceblue;
+    font-size: 1.1rem;
+    font-family: metrophobic;
+}
+
+.header-contents {
+    display: flex;
+    flex-direction: row;
+    transform: translateX(-6.5rem);
+    column-gap: 3rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ahover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 65%;
+}
+
+.ah1:hover{
+    opacity: 100%;
+    color: #FCDC2A;
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 1.2rem;
+    color: #FCDC2A;
+}
+
+.first-page-donor{
+    background-color: #285430;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.third-tit{
+    font-weight: 400;
+    font-family: magical;
+    font-size: 3rem;
+    color: #FCDC2A;
+}
+
+table{
+    border-spacing: 0 1.5rem;
+}
+
+td{
+    width: 25rem;
+}
+
+label{
+    font-size: 1.75rem;
+    color: aliceblue;
+}
+
+input{
+    height: 2rem;
+    width: 25rem;
+    padding: 0 2rem;
+    font-size: 1rem;
+    font-family: metrophobic;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    background-color: #E5D9B6;
+}
+
+textarea{
+    height: 2rem;
+    width: 25rem;
+    padding: 2rem;
+    resize: none; 
+    font-size: 1rem;
+    font-family: metrophobic;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    background-color: #E5D9B6;
+}
+
+#rest-name:focus, #rest-add:focus, #rest-contact:focus, #rest-desc:focus, #rest-serve:focus, #rest-time:focus, #rest-site:focus {
+    background-color: white;
+}
+
+.sub{
+    height: 2rem;
+    width: 10rem;
+    font-family: metrophobic;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    border: none;
+    font-weight: 900;
+    background-color: #E8DFCA;
+    color: #285430 ;
+}
+
+.sub:hover {
+    cursor: pointer;
+    background-color: #F3EEEA;
+    color: #285430 ;
+}
