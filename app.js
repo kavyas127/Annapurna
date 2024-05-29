@@ -16,8 +16,12 @@ app.get("/", function(req, res){
 });
 
 app.get("/donate",function(req,res){
-    res.render("donor.ejs");
-})
+    res.render("donor");
+});
+
+app.get("/home",function(req,res){
+    res.render("home");
+});
 
 
 
