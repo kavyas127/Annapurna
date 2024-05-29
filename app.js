@@ -19,10 +19,6 @@ app.get("/donate",function(req,res){
     res.render("donor");
 });
 
-app.get("/",function(req,res){
-    res.render("home");
-});
-
 
 
 
