@@ -1,0 +1,16 @@
+{
+  "name": "annapurna",
+  "version": "1.0.0",
+  "description": "Aditi, Kavya and Kriti's minor project for 6th Sem",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
