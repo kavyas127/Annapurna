@@ -15,6 +15,9 @@ app.get("/", function(req, res){
     res.render("home");
 });
 
+app.get("/donate",function(req,res){
+    res.render("donor.ejs");
+})
 
 
 
