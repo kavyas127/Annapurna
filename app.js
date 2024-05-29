@@ -19,7 +19,7 @@ app.get("/donate",function(req,res){
     res.render("donor");
 });
 
-app.get("/home",function(req,res){
+app.get("/",function(req,res){
     res.render("home");
 });
 
