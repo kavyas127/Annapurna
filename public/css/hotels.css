@@ -26,6 +26,10 @@
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: #285430;
+}
+
 .header {
     position: fixed;
     display: flex;
@@ -58,7 +62,6 @@ a {
     align-items: center;
     justify-content: center;
     opacity: 65%;
-    height: 1.5rem;
 }
 
 .ah1:hover{
@@ -72,91 +75,85 @@ a {
     color: #FCDC2A;
 }
 
-.first-page-donor{
-    background-color: #285430;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
+.list-mega{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
     row-gap: 2rem;
+    padding: 4rem 0rem;
 }
 
-.third-tit{
+.list-title{
     font-weight: 400;
     font-family: magical;
     font-size: 3rem;
     color: #FCDC2A;
 }
 
-table{
-    border-spacing: 0 1.5rem;
+.hotels-list{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    width: fit-content;
+    height: fit-content;
 }
 
-td{
-    width: 25rem;
-}
-
-label{
-    font-size: 1.75rem;
-    color: aliceblue;
-}
-
-input{
+.book-food{
     height: 2rem;
-    width: 25rem;
-    padding: 0 2rem;
-    font-size: 1rem;
-    font-family: metrophobic;
-    font-weight: 600;
-    border-radius: 0.25rem;
-    background-color: #E5D9B6;
-}
-
-textarea{
-    height: 2rem;
-    width: 25rem;
-    padding: 2rem;
-    resize: none; 
-    font-size: 1rem;
-    font-family: metrophobic;
-    font-weight: 600;
-    border-radius: 0.25rem;
-    background-color: #E5D9B6;
-}
-
-#rest-name:focus, #rest-add:focus, #rest-contact:focus, #rest-desc:focus, #rest-serve:focus, #rest-time:focus, #rest-site:focus {
-    background-color: white;
-}
-
-.sub{
-    height: 2rem;
-    width: 10rem;
+    width: 24rem;
     font-family: metrophobic;
     border-radius: 0.25rem;
     font-size: 1rem;
     border: none;
     font-weight: 900;
     background-color: #E8DFCA;
-    color: #285430 ;
+    color: #285430;
+    align-self: center;
+    transform: translateY(0.3rem);
 }
 
-.sub:hover {
+.book-food:hover {
     cursor: pointer;
     background-color: #F3EEEA;
     color: #285430 ;
 }
 
-.fa-solid{
-    font-size: 1.2rem;
+.hotel{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 40vh;
+    padding: 1rem;
+    border-radius: 1rem;
+    justify-content: center;
+    row-gap: 0.27rem;
 }
 
-.fa-bell-concierge{
-    transform: translateY(0.1rem);
+.avail{
+    background-color: #1A4D2E;
+    border: solid 0.08rem #FCDC2A;
+    color: aliceblue;
 }
 
-i{
-    height: 1.3rem;
+.booked{
+    color: #000000;
+    background-color: #EE9322;
+    border: solid 0.08rem #000000;
+}
+
+.hitem{
+    font-family: metrophobic;
+    font-size: 1.18rem;
+}
+
+.h{
+    font-weight: 800;
+    color: #FCDC2A;
+}
+
+.h-b{
+    font-weight: 800;
+    color: #481E14;
 }

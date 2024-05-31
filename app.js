@@ -15,9 +15,19 @@ app.get("/", function(req, res){
     res.render("home");
 });
 
+app.get("/receive", function(req, res){
+    res.render("hotels-page");
+});
+
 app.get("/donate",function(req,res){
     res.render("donor");
 });
+
+app.get("/receiver-info",function(req,res){
+    res.render("receiver");
+});
+
+
 
 
 
