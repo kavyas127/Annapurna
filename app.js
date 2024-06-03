@@ -47,6 +47,17 @@ const newDonation = new Donors({
     console.error("Failed to add donation:", error);
       res.status(500).send("Failed to add donation: " + error.message);
   }
+});
+app.get("/receive", function(req, res){
+    res.render("hotels-page");
+});
+
+app.get("/donate",function(req,res){
+    res.render("donor");
+});
+
+app.get("/receiver-info",function(req,res){
+    res.render("receiver");
 
 });
 
@@ -57,6 +68,7 @@ app.get("/home", function (req, res) {
 });
 
 
+
 // Connect to MongoDB and start the server
 connectDB().then(() => {
     app.listen(3000, function () {
@@ -64,4 +76,24 @@ connectDB().then(() => {
     });
 }).catch(err => {
     console.error("Failed to connect to the database", err);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.listen(3000, function(){
+    console.log("Server is running on port 3000");
 });
