@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/donor.css">
 </head>
-
 <body>
     <header class="header">
         <div class="logo">Annapurna</div>
@@ -20,40 +19,40 @@
     <div class="first-page-donor">
         <h1 class="third-tit">Donation Details</h1>
         <div class="details">
-            <form action="" method="">
+            <form action="/donate" method="post">
                 <table>
                     <tr>
-                        <td><label for="hotel-name">Name of your Restaurant </label></td>
-                        <td><input type="text" name="" id="rest-name"></td>
+                        <td><label for="hotel_name">Name of your Restaurant </label></td>
+                        <td><input type="text" name="hotel_name" id="rest-name"></td>
                     </tr>
                     <tr>
-                        <td><label for="hotel-name">Address of your Restaurant </label></td>
-                        <td><textarea name="" id="rest-add"></textarea></td>
+                        <td><label for="hotel_address">Address of your Restaurant </label></td>
+                        <td><textarea name="hotel_address" id="rest-add"></textarea></td>
                     </tr>
                     <tr>
-                        <td><label for="hotel-name">Contact Number </label></td>
-                        <td><input type="text" name="" id="rest-contact"></td>
+                        <td><label for="hotel_number">Contact Number </label></td>
+                        <td><input type="text" name="hotel_number" id="rest-contact"></td>
                     </tr>
                     <tr>
-                        <td><label for="hotel-name">Description of Food</label></td>
-                        <td><input type="text" name="" id="rest-desc" placeholder="Enter name of food"></td>
+                        <td><label for="hotel_des">Description of Food</label></td>
+                        <td><input type="text" name="hotel_des" id="rest-desc" placeholder="Enter name of food"></td>
                     </tr>
                     <tr>
-                        <td><label for="hotel-name">Serving Quantity</label></td>
-                        <td><input type="number" name="" id="rest-serve" min="1" placeholder="Select a number"></td>
+                        <td><label for="hotel_quantity">Serving Quantity</label></td>
+                        <td><input type="number" name="hotel_quantity" id="rest-serve" min="1" placeholder="Select a number"></td>
                     </tr>
                     <tr>
-                        <td><label for="hotel-name">Closing Time of Restaurant </label></td>
-                        <td><input type="time" name="" id="rest-time"></td>
+                        <td><label for="hotel_time">Closing Time of Restaurant </label></td>
+                        <td><input type="time" name="hotel_time" id="rest-time"></td>
                     </tr>
                     <tr>
-                        <td><label for="hotel-name">Restaurant Website Link</label></td>
-                        <td><input type="text" name="" id="rest-site"></td>
+                        <td><label for="hotel_site">Restaurant Website Link</label></td>
+                        <td><input type="text" name="hotel_site" id="rest-site"></td>
                     </tr>
                 </table>
+                <button class="sub" type="submit">Submit</button>
             </form>
         </div>
-        <button class="sub">Submit</button>
     </div>
 
     <script src="js/donor.js"></script>
