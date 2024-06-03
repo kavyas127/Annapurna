@@ -72,6 +72,13 @@ a {
     color: #FCDC2A;
 }
 
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1.8rem;
+}
+
 .first-page-donor{
     background-color: #285430;
     height: 100vh;

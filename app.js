@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const ejs = require("ejs");
-require('dotenv').config(); 
+require('dotenv').config();
 const { connectDB, Donors } = require('./server/models/donordb');
 
 const app = express();
@@ -30,33 +30,35 @@ app.post("/donate", async function (req, res) {
         return res.status(400).send("All fields are required.");
 
     }
-const newDonation = new Donors({
-    Name: hotel_name,
-    address: hotel_address,
-    phone_number: hotel_number,
-    description_food: hotel_des,
-    serving_quantity: hotel_quantity,
-    closing_time: hotel_time,
-    rest_site: hotel_site
+    const newDonation = new Donors({
+        Name: hotel_name,
+        address: hotel_address,
+        phone_number: hotel_number,
+        description_food: hotel_des,
+        serving_quantity: hotel_quantity,
+        closing_time: hotel_time,
+        rest_site: hotel_site
+    });
+    try {
+        await newDonation.save();
+        console.log("success")
+        res.send("Donation successfully added!");
+    } catch (error) {
+        console.error("Failed to add donation:", error);
+        res.status(500).send("Failed to add donation: " + error.message);
+    }
 });
-  try {
-      await newDonation.save();
-      console.log("success")
-      res.send("Donation successfully added!");
-  } catch (error) {
-    console.error("Failed to add donation:", error);
-      res.status(500).send("Failed to add donation: " + error.message);
-  }
-});
-app.get("/receive", function(req, res){
+
+
+app.get("/receive", function (req, res) {
     res.render("hotels-page");
 });
 
-app.get("/donate",function(req,res){
+app.get("/donate", function (req, res) {
     res.render("donor");
 });
 
-app.get("/receiver-info",function(req,res){
+app.get("/receiver-info", function (req, res) {
     res.render("receiver");
 
 });
@@ -94,6 +96,6 @@ connectDB().then(() => {
 
 
 
-app.listen(3000, function(){
+app.listen(3000, function () {
     console.log("Server is running on port 3000");
 });
