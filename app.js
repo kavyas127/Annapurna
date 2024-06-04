@@ -73,8 +73,8 @@ app.get("/home", function (req, res) {
 
 // Connect to MongoDB and start the server
 connectDB().then(() => {
-    app.listen(3000, function () {
-        console.log("Server is running on port 3000");
+    app.listen(5000, function () {
+        console.log("Server is running on port 5000");
     });
 }).catch(err => {
     console.error("Failed to connect to the database", err);
