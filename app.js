@@ -66,12 +66,6 @@ app.get("/home", function (req, res) {
     res.render("home");
 });
 
-// app.get("/donate-succes", function (req, res) {
-//     res.render("thankyou-donor");
-// });
-
-
-
 // Connect to MongoDB and start the server
 connectDB().then(() => {
     app.listen(5000, function () {
