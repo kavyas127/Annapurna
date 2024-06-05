@@ -12,9 +12,6 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-
-
-
 app.get("/", function (req, res) {
     res.render("home");
 });
@@ -68,29 +65,9 @@ app.get("/home", function (req, res) {
 
 // Connect to MongoDB and start the server
 connectDB().then(() => {
-    app.listen(5000, function () {
-        console.log("Server is running on port 5000");
+    app.listen(3000, function () {
+        console.log("Server is running on port 3000");
     });
 }).catch(err => {
     console.error("Failed to connect to the database", err);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(3000, function () {
-    console.log("Server is running on port 3000");
 });
