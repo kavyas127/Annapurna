@@ -42,7 +42,7 @@ app.post("/donate", async function (req, res) {
     try {
         await newDonation.save();
         console.log("success")
-        res.send("Donation successfully added!");
+        res.render("thankyou-donor");
     } catch (error) {
         console.error("Failed to add donation:", error);
         res.status(500).send("Failed to add donation: " + error.message);
@@ -60,14 +60,15 @@ app.get("/donate", function (req, res) {
 
 app.get("/receiver-info", function (req, res) {
     res.render("receiver");
-
 });
-
-
 
 app.get("/home", function (req, res) {
     res.render("home");
 });
+
+// app.get("/donate-succes", function (req, res) {
+//     res.render("thankyou-donor");
+// });
 
 
 

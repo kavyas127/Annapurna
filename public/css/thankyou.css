@@ -1,0 +1,128 @@
+@font-face {
+    font-family: rochester;
+    src: url(../fonts/Rochester-Regular.ttf);
+}
+
+@font-face {
+    font-family: noto;
+    src: url(../fonts/NotoSerifDisplay-VariableFont_wdth,wght.ttf);
+}
+
+@font-face {
+    font-family: metrophobic;
+    src: url(../fonts/Metrophobic-Regular.ttf);
+}
+
+@font-face {
+    font-family: magical;
+    src: url(../fonts/MagicalSource.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 6vh;
+    align-items: center;
+    padding: 1rem 3rem;
+    z-index: 100;
+    color: aliceblue;
+    font-size: 1.1rem;
+    font-family: metrophobic;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    /* color: aliceblue; */
+    font-size: 1.1rem;
+    font-family: metrophobic;
+    background-color: #E8DFCA;
+    padding: 0.5rem;
+    color: #285430 ;
+    border-radius: 0.75rem;
+}
+
+.ahover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 80%;
+    height: 1.5rem;
+}
+
+.ah1:hover{
+    opacity: 100%;
+    background-color: #F3EEEA;
+    color: #285430 ;
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 1.2rem;
+    color: #FCDC2A;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1.8rem;
+}
+
+.first-page-thanks-donor{
+    background-color: #285430;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.thanks-title{
+    font-weight: 400;
+    font-family: magical;
+    font-size: 3rem;
+    color: #FCDC2A;
+    text-align: center;
+}
+
+.thanks-subt{
+    font-family: rochester;
+    color: aliceblue;
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+.a-tag{
+    display: flex;
+    flex-direction: row;
+    width: 20vw;
+    justify-content: space-between;
+    transform: translateY(2rem);
+}
+
+.fa-solid{
+    font-size: 1.2rem;
+}
+
+.fa-bell-concierge{
+    transform: translateY(0.1rem);
+}
+
+i{
+    height: 1.3rem;
+}
