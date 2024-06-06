@@ -47,9 +47,17 @@ app.post("/donate", async function (req, res) {
 });
 
 
-app.get("/receive", function (req, res) {
-    res.render("hotels-page");
+app.get("/receive", async function (req, res) {
+    try {
+        const donors = await Donors.find();
+        console.log(donors); // Log the fetched data
+        res.render("hotels-page", { donors });
+    } catch (error) {
+        console.error("Error fetching donors:", error);
+        res.status(500).send("Internal Server Error");
+    }
 });
+
 
 app.get("/donate", function (req, res) {
     res.render("donor");

@@ -43,13 +43,7 @@ const donateSchema = new mongoose.Schema({
 });
 
 const Donors = mongoose.model('Donors', donateSchema);
-// Use insertMany with a promise and handle errors with .catch
-//donate.insertOne([
-//    
-//])
-//    .catch((error) => {
-//        console.error('Error inserting fruits:', error);
-//    });
+
 
 module.exports = {
   connectDB,
