@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const ejs = require("ejs");
 require('dotenv').config();
-const { connectDB, Donors } = require('./server/models/donordb');
+const { connectDB, Donors ,Receivers} = require('./server/models/db');
 
 const app = express();
 
@@ -45,6 +45,37 @@ app.post("/donate", async function (req, res) {
         res.status(500).send("Failed to add donation: " + error.message);
     }
 });
+
+app.get('/submit',(req,res)=>{
+res.render('receiver');
+})
+//
+
+app.post('/submit', async (req, res) => {
+    const { ngoName, ngoAddress, ngoPhoneNumber, pickupTime, distributionArea, aadharCard } = req.body;
+
+    if (!ngoName || !ngoAddress || !ngoPhoneNumber || !pickupTime || !distributionArea || !aadharCard) {
+        return res.status(400).send("All fields are required.");
+    }
+    const newReceiver = new Receivers({
+      NGO_Name: req.body.ngoName,
+      NGO_address:req.body.ngoAddress,
+      NGO_phone_number:req.body.ngoPhoneNumber,
+      pickup_time:req.body.pickupTime,
+      Distribution_area:req.body.distributionArea,
+      aadhar_card:req.body.aadharCard,
+    });
+  
+    try {
+        await newReceiver.save();
+        console.log("success")
+        res.render("thankyou-ngo");
+    } catch (err) {
+        res.status(500).send('Error saving to database: ' + err.message);
+    }
+  });
+  
+//
 
 
 app.get("/receive", async function (req, res) {
