@@ -52,6 +52,10 @@ app.get("/receiver-info/:id", function (req, res) {
     res.render("receiver", { donorId: donorId });
 });
 
+// app.get('/submit',function (req,res){
+//     res.render("receiver");
+// })
+
 app.post('/submit/:id', async (req, res) => {
     const donorId = req.params.id;
     const { ngoName, ngoAddress, ngoPhoneNumber, pickupTime, distributionArea, aadharCard } = req.body;
@@ -90,18 +94,16 @@ app.get("/receive", async function (req, res) {
     }
 });
 
-app.get('/submit',function (req,res){
-    res.render("receiver");
-})
-
-app.get("/receiver-info", function (req, res) {
-    res.render("receiver");
-});
 
 
-app.get("/donate", function (req, res) {
-    res.render("donor");
-});
+// app.get("/receiver-info", function (req, res) {
+//     res.render("receiver");
+// });
+
+
+// app.get("/donate", function (req, res) {
+//     res.render("donor");
+// });
 
 // app.get("/home", function (req, res) {
 //     res.render("home");
