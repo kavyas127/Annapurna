@@ -39,13 +39,50 @@ const donateSchema = new mongoose.Schema({
   rest_site: {
     type: String,
     required: true
+  },
+  booked: {
+    type: Boolean,
+    default: false
+  },
+  receiver: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Receivers'
   }
 });
 
+const receiveSchema = new mongoose.Schema({
+  NGO_Name: {
+    type: String,
+    required: true
+  },
+  NGO_address: {
+    type: String,
+    required: true
+  },
+  NGO_phone_number: {
+    type: String,
+    required: true
+  },
+  pickup_time: {
+    type: String,
+    required: true
+  },
+  Distribution_area: {
+    type: String,
+    required: true
+  },
+  aadhar_card: {
+    type: Number,
+    required: true
+  },
+});
+
+const Receivers=mongoose.model('Receivers',receiveSchema);
 const Donors = mongoose.model('Donors', donateSchema);
 
 
 module.exports = {
   connectDB,
-  Donors
+  Donors,
+  Receivers
 }

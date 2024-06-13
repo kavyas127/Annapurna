@@ -25,17 +25,29 @@
                 <% } %>
                 <div class="hotels-list">
             <% } %>
-            <div class="hotel avail">
-                <p class="hitem"><span class="h">Restaurant Name: </span><%= donor.Name %></p>
-                <p class="hitem"><span class="h">Restaurant Address: </span><%= donor.address %></p>
-                <p class="hitem"><span class="h">Serving Quantity: </span><%= donor.serving_quantity %></p>
-                <p class="hitem"><span class="h">Contact Number: </span><%= donor.phone_number %></p>
-                <p class="hitem"><span class="h">Website Link: </span><a href="<%= donor.rest_site %>"><%= donor.rest_site %></a></p>
-                <p class="hitem"><span class="h">Best Before: </span><%= donor.closing_time %></p>
-                <button class="book-food" type="submit"><a href="receiver-info">Distribute</a></button>
+            <div class="hotel <%= donor.booked ? 'booked' : 'avail' %>">
+                <% if (donor.booked) { %>
+                    <div class="hotel booked">
+                        <p class="hitem"><span class="h-b"><em>Booked From:</em></span></p>
+                        <p class="hitem"><span class="h-b">Restaurant Name: </span><%= donor.Name %></p>
+                        <p class="hitem"><span class="h-b">Contact Number: </span><%= donor.phone_number %></p><br>
+                        <p class="hitem"><span class="h-b"><em>Booked By:</em></span></p>
+                        <p class="hitem"><span class="h-b">NGO/Volunteer Name: </span><%= donor.receiver.NGO_Name %></p>
+                        <p class="hitem"><span class="h-b">NGO/Volunteer Number: </span><%= donor.receiver.NGO_phone_number %></p>
+                    </div>
+                <% } else { %>
+                    <p class="hitem"><span class="h">Restaurant Name: </span><%= donor.Name %></p>
+                    <p class="hitem"><span class="h">Restaurant Address: </span><%= donor.address %></p>
+                    <p class="hitem"><span class="h">Serving Quantity: </span><%= donor.serving_quantity %></p>
+                    <p class="hitem"><span class="h">Contact Number: </span><%= donor.phone_number %></p>
+                    <p class="hitem"><span class="h">Website Link: </span><a href="<%= donor.rest_site %>"><%= donor.rest_site %></a></p>
+                    <p class="hitem"><span class="h">Best Before: </span><%= donor.closing_time %></p>
+                    <button class="book-food" type="submit"><a href="/receiver-info/<%= donor._id %>">Distribute</a></button>
+                <% } %>
             </div>
             <% counter++; %>
         <% }); %>
+        
         </div>
     </div>
 </body>
