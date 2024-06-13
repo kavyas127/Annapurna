@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const ejs = require("ejs");
 require('dotenv').config();
-const { connectDB, Donors, Receivers } = require('./server/models/db');
+const { connectDB, Donors ,Receivers} = require('./server/models/db');
 
 const app = express();
 
@@ -47,37 +47,37 @@ app.post("/donate", async function (req, res) {
     }
 });
 
-app.get("/receiver-info/:id", function (req, res) {
-    const donorId = req.params.id;
-    res.render("receiver", { donorId: donorId });
-});
+app.get('/submit',(req,res)=>{
+res.render('receiver');
+})
+//
 
-app.post('/submit/:id', async (req, res) => {
-    const donorId = req.params.id;
+app.post('/submit', async (req, res) => {
     const { ngoName, ngoAddress, ngoPhoneNumber, pickupTime, distributionArea, aadharCard } = req.body;
 
     if (!ngoName || !ngoAddress || !ngoPhoneNumber || !pickupTime || !distributionArea || !aadharCard) {
         return res.status(400).send("All fields are required.");
     }
-
     const newReceiver = new Receivers({
-        NGO_Name: ngoName,
-        NGO_address: ngoAddress,
-        NGO_phone_number: ngoPhoneNumber,
-        pickup_time: pickupTime,
-        Distribution_area: distributionArea,
-        aadhar_card: aadharCard
+      NGO_Name: req.body.ngoName,
+      NGO_address:req.body.ngoAddress,
+      NGO_phone_number:req.body.ngoPhoneNumber,
+      pickup_time:req.body.pickupTime,
+      Distribution_area:req.body.distributionArea,
+      aadhar_card:req.body.aadharCard,
     });
-
+  
     try {
-        const savedReceiver = await newReceiver.save();
-        await Donors.findByIdAndUpdate(donorId, { booked: true, receiver: savedReceiver._id });
-
-        res.render('thankyou-ngo');
+        await newReceiver.save();
+        console.log("success")
+        res.render("thankyou-ngo");
     } catch (err) {
         res.status(500).send('Error saving to database: ' + err.message);
     }
-});
+  });
+  
+//
+
 
 app.get("/receive", async function (req, res) {
     try {
