@@ -117,4 +117,3 @@ connectDB().then(() => {
 }).catch(err => {
     console.error("Failed to connect to the database", err);
 });
- 
