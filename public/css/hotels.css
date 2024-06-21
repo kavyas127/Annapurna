@@ -71,8 +71,10 @@ a {
 }
 
 .logo {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #FCDC2A;
+    font-family: rochester;
+    font-weight: 400;
 }
 
 .list-mega{

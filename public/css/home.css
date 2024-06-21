@@ -53,8 +53,10 @@ button:hover {
 }
 
 .logo {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #FCDC2A;
+    font-family: rochester;
+    font-weight: 400;
 }
 
 .header {
@@ -111,19 +113,19 @@ button:hover {
 }
 
 .first-title {
-    font-family: noto;
-    font-size: 5rem;
-    font-weight: 700;
-    color: aliceblue;
+    font-family: rochester;
+    font-size: 8rem;
+    font-weight: 500;
+    color: #FCDC2A;
     transform: translateY(1rem);
 }
 
 .first-sub {
-    font-size: 1.6rem;
-    font-family: rochester;
+    font-size: 1.4rem;
+    font-family: noto;
     color: aliceblue;
     width: 50rem;
-    font-weight: 400;
+    font-weight: 500;
     height: fit-content;
     text-align: center;
 }
