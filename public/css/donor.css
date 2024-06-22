@@ -81,7 +81,7 @@ form{
     row-gap: 1.8rem;
 }
 
-.first-page-donor{
+.first-page-donor, .first-page-guidelines{
     background-color: #285430;
     height: 100vh;
     width: 100vw;
@@ -168,4 +168,73 @@ textarea{
 
 i{
     height: 1.3rem;
+}
+
+.quote{
+    color: aliceblue;
+    font-size: 4rem;
+    font-family: magical;
+    font-weight: 400;
+}
+
+span{
+    color: #FCDC2A;
+    font-size: 5rem;
+    font-family: rochester;
+}
+
+.report-spam{
+    font-family: magical;
+    font-size: 1.2rem;
+    color: #FCDC2A;
+    font-weight: 400;
+}
+
+.fa-circle-chevron-down{
+    color: #285430;
+    font-size: 1.3rem;
+}
+
+.drop-donor, .receiver-drop{
+    justify-content: space-between;
+    display: flex;
+    padding: 1rem;
+    height: fit-content;
+    width: 90vw;
+    background-color: #FCDC2A;
+    font-size: 1.3rem;
+    font-family: metrophobic;
+    font-weight: 800;
+    overflow-y: hidden;
+}
+
+.donor-guide-main, .reciever-guide-main{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    height: fit-content;
+    overflow-y: hidden;
+}
+.hide-donor, .receivers-hide{
+    color: #FCDC2A;
+    font-size: 1.3rem;
+    font-family: mono;
+    height: fit-content;
+    overflow-y: hidden;
+    font-weight: 300;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    transform: translateX(1.4rem);
+    height: fit-content;
+    overflow-y: hidden;
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
 }

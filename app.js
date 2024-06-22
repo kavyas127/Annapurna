@@ -20,6 +20,10 @@ app.get("/donate", function (req, res) {
     res.render("donor");
 });
 
+app.get("/guidelines", function (req, res) {
+    res.render("guidelines");
+});
+
 app.post("/donate", async function (req, res) {
     const { hotel_name, hotel_address, hotel_number, hotel_des, hotel_quantity, hotel_time, hotel_site } = req.body;
 
@@ -94,20 +98,6 @@ app.get("/receive", async function (req, res) {
     }
 });
 
-
-
-// app.get("/receiver-info", function (req, res) {
-//     res.render("receiver");
-// });
-
-
-// app.get("/donate", function (req, res) {
-//     res.render("donor");
-// });
-
-// app.get("/home", function (req, res) {
-//     res.render("home");
-// });
 
 // Connect to MongoDB and start the server
 connectDB().then(() => {
