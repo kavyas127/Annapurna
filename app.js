@@ -56,9 +56,6 @@ app.get("/receiver-info/:id", function (req, res) {
     res.render("receiver", { donorId: donorId });
 });
 
-// app.get('/submit',function (req,res){
-//     res.render("receiver");
-// })
 
 app.post('/submit/:id', async (req, res) => {
     const donorId = req.params.id;
