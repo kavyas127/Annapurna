@@ -93,10 +93,18 @@ form {
     row-gap: 2rem;
 }
 
-.third-tit {
+.main-t {
     font-weight: 400;
     font-family: magical;
     font-size: 3rem;
+    color: #FCDC2A;
+    width: fit-content;
+    margin: 0 auto; /* Add this line to center horizontally */
+}
+
+.title {
+    font-weight: 400;
+    font-size: 2rem;
     color: #FCDC2A;
 }
 
@@ -107,8 +115,8 @@ tr {
 }
 
 label {
-    font-size: 2.4rem;
-    color: #FCDC2A;
+    font-size: 1.5rem;
+    color: aliceblue;
 }
 
 textarea {
@@ -123,7 +131,7 @@ textarea {
     background-color: #E5D9B6;
 }
 
-#rest-name:focus, #rest-add:focus, #rest-contact:focus, #rest-desc:focus, #rest-serve:focus, #rest-time:focus, #rest-site:focus {
+#desc:focus {
     background-color: white;
 }
 
@@ -157,14 +165,14 @@ i {
     height: 1.3rem;
 }
 
-.against{
+.against {
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
     width: 56vw;
 }
 
-.options{
+.options {
     display: flex;
     flex-direction: row;
     column-gap: 2rem;
@@ -174,35 +182,57 @@ i {
     width: 56vw;
 }
 
-.ra, .cb{
-    height: 1rem;
+.ra, .cb {
+    display: none;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+input[type="radio"] + label::before,
+input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 1rem;
+    height: 1rem;
+    border: 2px solid #FCDC2A;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    transition: all 0.3s ease;
 }
 
-input[type="radio"]:checked {
-    background-color: #285430;
-    border-color: #285430;
+input[type="radio"]:checked + label::before,
+input[type="checkbox"]:checked + label::before {
+    background-color: #FCDC2A;
 }
 
-input[type="radio"]:checked::before {
-    content: '';
-    display: block;
-    width: 0.7rem;
-    height: 0.7rem;
-    margin: 0.15rem;
-    background-color: #285430; /* Green color */
-    border-radius: 50%;
+input[type="radio"]:checked + label::after,
+input[type="checkbox"]:checked + label::after {
+    content: "\2714"; /* Unicode for checkmark */
+    position: absolute;
+    left: 0.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #285430;
+    font-size: 1rem;
 }
 
-.details{
+.details {
     transform: translateY(1.6rem);
 }
 
-.thistr{
+.thistr {
     width: 56vw;
 }
 
-td{
+td {
     width: 29vw;
     display: flex;
     flex-direction: row;
@@ -210,7 +240,7 @@ td{
     align-items: center;
 }
 
-.des{
+.des {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;

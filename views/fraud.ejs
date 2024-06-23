@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/fraud.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Annapurna</div>
+        <div class="header-contents">
+            <a href="/guidelines" class="ahover ah1"><i class="fa-solid fa-scroll"></i>&nbsp;&nbsp; Guidelines</a>
+            <a href="/receive" class="ahover ah1"><i class="fa-solid fa-bell-concierge"></i>&nbsp;&nbsp; Restaurants
+                Feed</a>
+            <a href="/" class="ahover ah1"><i class="fa-solid fa-house"></i>&nbsp;&nbsp; Home</a>
+        </div>
+    </header>
+
+    <div class="first-page-donor">
+        <div class="details">
+            <h1 class="main-t">Report Fraud</h1>
+            <form action="/??" method="post">
+
+                <div class="against">
+                    <label for="against" class="title">Against:</label>
+                    <div class="options">
+                        <table>
+                            <tr class="thistr">
+                                <td>
+                                    <input type="radio" name="against" id="rest" class="ra">
+                                    <label for="rest">Restaurant</label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="against" id="ngo" class="ra">
+                                    <label for="ngo">NGO</label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="against" id="volun" class="ra">
+                                    <label for="volun">Volunteer</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="reason">
+                    <label for="against" class="title">Reason / s:</label>
+                    <div class="options">
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="badQuality" name="against" class="cb">
+                                    <label for="badQuality">Bad quality of food</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="nonExistRestaurant" name="against" class="cb">
+                                    <label for="nonExistRestaurant">Restaurant does not exist</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="restaurantClosed" name="against" class="cb">
+                                    <label for="restaurantClosed">Restaurant closed</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="lessQuantity" name="against" class="cb">
+                                    <label for="lessQuantity">Received less quantity than mentioned</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="poorPackaging" name="against" class="cb">
+                                    <label for="poorPackaging">No hygiene or poor packaging</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="longWait" name="against" class="cb">
+                                    <label for="longWait">Long waiting time</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="rudeBehavior" name="against" class="cb">
+                                    <label for="rudeBehavior">Rude behaviour</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="suspiciousBehavior" name="against" class="cb">
+                                    <label for="suspiciousBehavior">Suspicious behaviour</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="noShow" name="against" class="cb">
+                                    <label for="noShow">Receiver has not come yet</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="scamCall" name="against" class="cb">
+                                    <label for="scamCall">Scam calling</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="wrongLocation" name="against" class="cb">
+                                    <label for="wrongLocation">Wrong location given</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="others" name="against" class="cb">
+                                    <label for="others">Others</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="des">
+                    <label for="desc" class="title">Description:</label>
+                    <textarea name="details" id="desc" placeholder="Provide a brief description of the fraud"></textarea>
+                </div>
+
+                <button class="sub" type="submit"><a href="/thanks">Submit</a></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/74c27236-3b14-45b0-9581-0bb30f2f63d9/webchat/config.js" defer></script>
+</body>
+
+</html>

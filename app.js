@@ -24,6 +24,10 @@ app.get("/guidelines", function (req, res) {
     res.render("guidelines");
 });
 
+app.get("/fraud", function (req, res) {
+    res.render("fraud");
+});
+
 app.post("/donate", async function (req, res) {
     const { hotel_name, hotel_address, hotel_number, hotel_des, hotel_quantity, hotel_time, hotel_site } = req.body;
 
