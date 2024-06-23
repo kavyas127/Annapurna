@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const ejs = require("ejs");
 require('dotenv').config();
-const { connectDB, Donors, Receivers } = require('./server/models/db');
+const { connectDB, Donors, Receivers, Frauds } = require('./server/models/db');
 
 const app = express();
 
@@ -98,6 +98,32 @@ app.get("/receive", async function (req, res) {
         res.status(500).send("Internal Server Error");
     }
 });
+
+//fraud
+app.post('/report-fraud', async (req, res) => {
+    const { against, complaint, description } = req.body;
+  
+    // Ensure complaint is always an array
+    const complaintArray = Array.isArray(complaint) ? complaint : [complaint];
+  
+    const newFraudReport = new Frauds({
+      against,
+      complaint: complaintArray,
+      description,
+    });
+  
+    try {
+      await newFraudReport.save();
+      res.render("thankyou-fraud")
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('Internal Server Error');
+    }
+  });
+
+
+
+
 
 
 // Connect to MongoDB and start the server

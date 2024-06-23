@@ -77,6 +77,22 @@ const receiveSchema = new mongoose.Schema({
   },
 });
 
+const fraudSchema = new mongoose.Schema({
+  against: {
+    type:String,
+    required:true
+  },
+  complaint: {
+   type:[String],
+   required:true
+  },
+  description: {
+    type:String,
+    required:true
+  },
+});
+
+const Frauds=mongoose.model('Frauds',fraudSchema);
 const Receivers=mongoose.model('Receivers',receiveSchema);
 const Donors = mongoose.model('Donors', donateSchema);
 
@@ -84,5 +100,6 @@ const Donors = mongoose.model('Donors', donateSchema);
 module.exports = {
   connectDB,
   Donors,
-  Receivers
+  Receivers,
+  Frauds
 }

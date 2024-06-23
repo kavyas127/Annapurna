@@ -23,7 +23,7 @@
     <div class="first-page-donor">
         <div class="details">
             <h1 class="main-t">Report Fraud</h1>
-            <form action="/??" method="post">
+            <form action="/report-fraud" method="post">
 
                 <div class="against">
                     <label for="against" class="title">Against:</label>
@@ -53,61 +53,61 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="badQuality" name="against" class="cb">
+                                    <input type="checkbox" id="badQuality" name="complaint" class="cb">
                                     <label for="badQuality">Bad quality of food</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" id="nonExistRestaurant" name="against" class="cb">
+                                    <input type="checkbox" id="nonExistRestaurant" name="complaint" class="cb">
                                     <label for="nonExistRestaurant">Restaurant does not exist</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="restaurantClosed" name="against" class="cb">
+                                    <input type="checkbox" id="restaurantClosed" name="complaint" class="cb">
                                     <label for="restaurantClosed">Restaurant closed</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" id="lessQuantity" name="against" class="cb">
+                                    <input type="checkbox" id="lessQuantity" name="complaint" class="cb">
                                     <label for="lessQuantity">Received less quantity than mentioned</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="poorPackaging" name="against" class="cb">
+                                    <input type="checkbox" id="poorPackaging" name="complaint" class="cb">
                                     <label for="poorPackaging">No hygiene or poor packaging</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" id="longWait" name="against" class="cb">
+                                    <input type="checkbox" id="longWait" name="complaint" class="cb">
                                     <label for="longWait">Long waiting time</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="rudeBehavior" name="against" class="cb">
+                                    <input type="checkbox" id="rudeBehavior" name="complaint" class="cb">
                                     <label for="rudeBehavior">Rude behaviour</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" id="suspiciousBehavior" name="against" class="cb">
+                                    <input type="checkbox" id="suspiciousBehavior" name="complaint" class="cb">
                                     <label for="suspiciousBehavior">Suspicious behaviour</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="noShow" name="against" class="cb">
+                                    <input type="checkbox" id="noShow" name="complaint" class="cb">
                                     <label for="noShow">Receiver has not come yet</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" id="scamCall" name="against" class="cb">
+                                    <input type="checkbox" id="scamCall" name="complaint" class="cb">
                                     <label for="scamCall">Scam calling</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="wrongLocation" name="against" class="cb">
+                                    <input type="checkbox" id="wrongLocation" name="complaint" class="cb">
                                     <label for="wrongLocation">Wrong location given</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" id="others" name="against" class="cb">
+                                    <input type="checkbox" id="others" name="complaint" class="cb">
                                     <label for="others">Others</label>
                                 </td>
                             </tr>
@@ -117,7 +117,7 @@
 
                 <div class="des">
                     <label for="desc" class="title">Description:</label>
-                    <textarea name="details" id="desc" placeholder="Provide a brief description of the fraud"></textarea>
+                    <textarea name="description" id="desc" placeholder="Provide a brief description of the fraud"></textarea>
                 </div>
 
                 <button class="sub" type="submit">Submit</button>
