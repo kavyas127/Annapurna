@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="public/css/fraud.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Annapurna</div>
+        <div class="header-contents">
+            <a href="/guidelines" class="ahover ah1"><i class="fa-solid fa-scroll"></i>&nbsp;&nbsp; Guidelines</a>
+            <a href="/receive" class="ahover ah1"><i class="fa-solid fa-bell-concierge"></i>&nbsp;&nbsp; Restaurants
+                Feed</a>
+            <a href="/" class="ahover ah1"><i class="fa-solid fa-house"></i>&nbsp;&nbsp; Home</a>
+        </div>
+    </header>
+
+    <div class="first-page-donor">
+        <div class="details">
+            <form action="/??" method="post">
+
+                <div class="against">
+                    <label for="against">Against:</label>
+                    <div class="options">
+                        <table>
+                            <tr class="thistr">
+                                <td><input type="radio" name="against" id="rest" class="ra">Restaurant</td>
+                                <td><input type="radio" name="against" id="ngo" class="ra">NGO</td>
+                                <td><input type="radio" name="against" id="volun" class="ra">Volunteer</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="reason">
+                    <label for="against">Reason / s:</label>
+                    <div class="options">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">Bad quality of food</td>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">Restaurant does not exist
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">Restaurant closed</td>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">Received less quantity
+                                    than mentioned</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">No hygiene or poor
+                                    packaging</td>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">Long waiting time</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">Rude behaviour</td>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">Suspicious behaviour
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">Receiver has not come yet
+                                </td>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">Scam calling</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">Wrong location given</td>
+                                <td><input type="checkbox" name="against" id="fake" class="cb">Others</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="des">   
+                    <label for="against">Description:</label>
+                    <textarea name="details" id="desc" placeholder="Provide a brief description of the fraud"></textarea>
+                </div>
+
+                <button class="sub" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/74c27236-3b14-45b0-9581-0bb30f2f63d9/webchat/config.js"
+        defer></script>
+</body>
+
+</html>
