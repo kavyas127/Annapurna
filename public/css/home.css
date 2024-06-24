@@ -117,12 +117,12 @@ button:hover {
     font-size: 8rem;
     font-weight: 500;
     color: #FCDC2A;
-    transform: translateY(1rem);
+    transform: translateY(3rem);
 }
 
 .first-sub {
     font-size: 1.4rem;
-    font-family: noto;
+    font-family: metrophobic;
     color: aliceblue;
     width: 50rem;
     font-weight: 500;
@@ -330,11 +330,21 @@ button:hover {
     height: 15vh;
     width: 100vw;
     background-color: #1A4D2E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FCDC2A;
+    font-size: 1.25rem;
+    font-family: noto;
+    font-weight: 600;
 }
 
 .fourth-img{
     width: 40vw;
     height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fourth-content{
@@ -377,6 +387,9 @@ span{
     height: fit-content;
 }
 
+.footy{
+    text-decoration: underline;
+}
 
 
 
