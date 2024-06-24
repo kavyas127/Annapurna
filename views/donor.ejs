@@ -32,7 +32,7 @@
                     </tr>
                     <tr>
                         <td><label for="hotel_number">Contact Number </label></td>
-                        <td><input type="text" name="hotel_number" id="rest-contact" required="true"></td>
+                        <td><input type="text" name="hotel_number" id="rest-contact" required="true" min="6000000000" max="9999999999"></td>
                     </tr>
                     <tr>
                         <td><label for="hotel_des">Description of Food</label></td>
@@ -48,7 +48,7 @@
                     </tr>
                     <tr>
                         <td><label for="hotel_site">Restaurant Website Link</label></td>
-                        <td><input type="text" name="hotel_site" id="rest-site" required="true"></td>
+                        <td><input type="url" name="hotel_site" id="rest-site" required="true"></td>
                     </tr>
                 </table>
                 <button class="sub" type="submit">Submit</button>
